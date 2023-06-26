@@ -25,6 +25,8 @@ public class MonsterMove : MonoBehaviour
 
     private void monsterMove()
     {
+        int childCount = target.transform.childCount;
+
         if (targetCount % 2 == 0)
         {
             if(gameObject.name == "Dragon(Clone)" || gameObject.name == "Small Dragon(Clone)")
@@ -39,29 +41,32 @@ public class MonsterMove : MonoBehaviour
         }
         else
         {
-            if (target.transform.GetChild(targetCount - 1).transform.position.y < target.transform.GetChild(targetCount).transform.position.y)
+            if(targetCount - 1 >= 0 && targetCount < childCount)
             {
-                if(gameObject.name == "Dragon(Clone)" || gameObject.name == "Small Dragon(Clone)")
+                if (target.transform.GetChild(targetCount - 1).transform.position.y < target.transform.GetChild(targetCount).transform.position.y)
                 {
-                    transform.Translate(0, Time.deltaTime * 1.4f, 0);
+                    if (gameObject.name == "Dragon(Clone)" || gameObject.name == "Small Dragon(Clone)")
+                    {
+                        transform.Translate(0, Time.deltaTime * 1.4f, 0);
+                    }
+                    if (gameObject.name == "Jinn(Clone)")
+                    {
+                        transform.Translate(0, Time.deltaTime * 1.5f, 0);
+                    }
+                    transform.Translate(0, Time.deltaTime * 1.3f, 0);
                 }
-                if (gameObject.name == "Jinn(Clone)")
+                else
                 {
-                    transform.Translate(0, Time.deltaTime * 1.5f, 0);
+                    if (gameObject.name == "Dragon(Clone)" || gameObject.name == "Small Dragon(Clone)")
+                    {
+                        transform.Translate(0, -Time.deltaTime * 1.4f, 0);
+                    }
+                    if (gameObject.name == "Jinn(Clone)")
+                    {
+                        transform.Translate(0, -Time.deltaTime * 1.5f, 0);
+                    }
+                    transform.Translate(0, -Time.deltaTime * 1.3f, 0);
                 }
-                transform.Translate(0, Time.deltaTime *1.3f , 0);
-            }
-            else
-            {
-                if (gameObject.name == "Dragon(Clone)" || gameObject.name == "Small Dragon(Clone)")
-                {
-                    transform.Translate(0, -Time.deltaTime * 1.4f, 0);
-                }
-                if (gameObject.name == "Jinn(Clone)")
-                {
-                    transform.Translate(0, -Time.deltaTime * 1.5f, 0);
-                }
-                transform.Translate(0, -Time.deltaTime * 1.3f, 0);
             }
         }   
     }
