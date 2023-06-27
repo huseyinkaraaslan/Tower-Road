@@ -11,7 +11,6 @@ public class CreateMonster : MonoBehaviour
 
     public Transform monstersInGame;
     private int level, stage;
-    private int lastTime, tempTime;
     private float timer = 0f;
 
     void Start()
@@ -30,7 +29,7 @@ public class CreateMonster : MonoBehaviour
 
                     case 1://level 2
                         numberOfMonsters[levels].Add(13);
-                        numberOfMonsters[levels][stages] -= (stages * 6);//(stages)(monsters) // (0)(13), (1)(7) ---> in the last stage will be 1 monster                       
+                        numberOfMonsters[levels][stages] -= (stages * 6);//(stages)(monsters) // (0)(13), (1)(7) ---> in the last stage will be 7 monster                       
                         break;
 
                     case 2://level 3
@@ -44,15 +43,15 @@ public class CreateMonster : MonoBehaviour
                         break;
 
                     case 4://level 5
-                        numberOfMonsters[levels].Add(21);
-                        numberOfMonsters[levels][stages] -= (stages * 5);//(stages)(monsters) // (0)(21), (1)(16), (2)(11), (3)(6), (4)(1) ---> in the last stage will be 1 monster
+                        numberOfMonsters[levels].Add(40);
+                        numberOfMonsters[levels][stages] -= (stages * 9);//(stages)(monsters) // (0)(40), (1)(31), (2)(22), (3)(13), (4)(4) ---> in the last stage will be 4 monster
                         break;
 
                 }
             }
         }
 
-        level = 3;
+        level = 1;
         stage = 1;
     }
 
@@ -162,7 +161,7 @@ public class CreateMonster : MonoBehaviour
                         GameObject newMonster = Instantiate(monsters[2], startPosition.transform.position, Quaternion.identity);
                         newMonster.transform.SetParent(monstersInGame);
                         timer = 0f; numberOfMonsters[2][2]--;
-                        if (numberOfMonsters[2][2] == 4 || numberOfMonsters[2][2] == 3 || numberOfMonsters[2][2] == 2 || numberOfMonsters[2][2] == 1)
+                        if (numberOfMonsters[2][2] == 4 || numberOfMonsters[2][2] == 3)
                         {
                             stage = 2;
                         }
@@ -187,7 +186,7 @@ public class CreateMonster : MonoBehaviour
                         newMonster.transform.SetParent(monstersInGame);
                         timer = 0f; numberOfMonsters[3][0]--;
                         if (numberOfMonsters[3][0] % 3 == 0 || numberOfMonsters[3][0] % 4 == 0 || numberOfMonsters[3][0] % 5 == 0 ||
-                            numberOfMonsters[3][0] == 1 || numberOfMonsters[1][0] == 0)  // 0 1 3 4 5 6 8 9 10 12 15 16 18 20 21 24 25 27 28 
+                            numberOfMonsters[3][0] == 1 || numberOfMonsters[3][0] == 0)  // 0 1 3 4 5 6 8 9 10 12 15 16 18 20 21 24 25 27 28 
                         {
                             stage = 2;
                         }
@@ -200,7 +199,7 @@ public class CreateMonster : MonoBehaviour
                         GameObject newMonster = Instantiate(monsters[1], startPosition.transform.position, Quaternion.identity);
                         newMonster.transform.SetParent(monstersInGame);
                         timer = 0f; numberOfMonsters[3][1]--;
-                        if (numberOfMonsters[3][1] % 3 == 0  || numberOfMonsters[3][1] == 1)  // 1 3 6 9 12 15 18 21 
+                        if (numberOfMonsters[3][1] % 3 == 0  || numberOfMonsters[3][1] == 1 && numberOfMonsters[3][1] != 12)  // 1 3 6 9 (12) 15 18 21 
                         {
                             stage = 1;
                         }
@@ -220,9 +219,10 @@ public class CreateMonster : MonoBehaviour
                         {
                             stage = 2;
                         }
-                        if (numberOfMonsters[3][2] == 10 || numberOfMonsters[3][2] == 5 || numberOfMonsters[3][2] == 1 || numberOfMonsters[3][2] == 0)
+                        if (numberOfMonsters[3][2] == 10 || numberOfMonsters[3][2] == 8 || numberOfMonsters[3][2] == 5 || numberOfMonsters[3][2] == 4 ||
+                            numberOfMonsters[3][2] == 2 || numberOfMonsters[3][2] == 1 || numberOfMonsters[3][2] == 0)
                         {
-                            level = 4;
+                            stage = 4;
                         }
                     }
                     break;
@@ -243,6 +243,95 @@ public class CreateMonster : MonoBehaviour
                         }
                     }
                     break;
+            }
+        }
+
+        else if (level == 5)
+        {
+            switch (stage)
+            {
+                case 1:
+                    if (timer > 2f && numberOfMonsters[4][0] > 0)
+                    {
+                        GameObject newMonster = Instantiate(monsters[0], startPosition.transform.position, Quaternion.identity);
+                        newMonster.transform.SetParent(monstersInGame);
+                        timer = 0f; numberOfMonsters[4][0]--;
+                        if (numberOfMonsters[4][0] % 3 == 0 || numberOfMonsters[4][0] % 4 == 0 || numberOfMonsters[4][0] % 5 == 0 ||
+                            numberOfMonsters[4][0] == 1 || numberOfMonsters[4][0] == 0)  // 0 1 3 4 5 6 8 9 10 12 15 16 18 20 21 24 25 27 28 30 32 33 35 36 39
+                        {
+                            stage = 2;
+                        }
+                    }
+                    break;
+
+                case 2:
+                    if (timer > 1.5f && numberOfMonsters[4][1] > 0)
+                    {
+                        GameObject newMonster = Instantiate(monsters[1], startPosition.transform.position, Quaternion.identity);
+                        newMonster.transform.SetParent(monstersInGame);
+                        timer = 0f; numberOfMonsters[4][1]--;
+                        if (numberOfMonsters[4][1] % 3 == 0 || numberOfMonsters[4][1] % 5 == 0 && 
+                            numberOfMonsters[4][1] != 12 && numberOfMonsters[4][1] != 20 && numberOfMonsters[4][1] != 24) // 3 5 6 9 10 (12) 15 18 (20) 21 (24) 25 27 30 
+                        {
+                            stage = 1;
+                        }
+                        if (numberOfMonsters[4][1] % 4 == 0 || numberOfMonsters[4][1] == 0) // 0 4 8 12 16 20 24 28
+                        {
+                            stage = 3;
+                        }
+                    }
+                    break;
+                case 3:
+                    if (timer > 1.5f && numberOfMonsters[4][2] > 0)
+                    {
+                        GameObject newMonster = Instantiate(monsters[2], startPosition.transform.position, Quaternion.identity);
+                        newMonster.transform.SetParent(monstersInGame);
+                        timer = 0f; numberOfMonsters[4][2]--;
+                        if (numberOfMonsters[4][2] % 3 == 0 && numberOfMonsters[4][2] != 12 ) // 3 6 9 (12) 15 18 21
+                        {
+                            stage = 2;
+                        }
+                        if (numberOfMonsters[4][2] % 4 == 0 || numberOfMonsters[4][2] == 0) // 0 4 8 12 16 20 
+                        {
+                            stage = 4;
+                        }
+                    }
+                    break;
+                case 4:
+                    if (timer > 2f && numberOfMonsters[4][3] > 0)
+                    {
+                        GameObject newMonster = Instantiate(monsters[3], startPosition.transform.position, Quaternion.identity);
+                        newMonster.transform.SetParent(monstersInGame);
+                        timer = 0f; numberOfMonsters[4][3]--;
+                        if (numberOfMonsters[4][3] % 3 == 0) // 3 6 9 12
+                        {
+                            stage = 3;
+                        }
+                        if (numberOfMonsters[4][3] == 10 || numberOfMonsters[4][3] == 7 || numberOfMonsters[4][3] == 1 || numberOfMonsters[4][3] == 0)
+                        {
+                            stage = 5;
+                        }
+                    }
+                    break;
+
+                case 5:
+                    if (timer > 2f && numberOfMonsters[4][4] > 0)
+                    {
+                        GameObject newMonster = Instantiate(monsters[4], startPosition.transform.position, Quaternion.identity);
+                        newMonster.transform.SetParent(monstersInGame);
+                        timer = 0f; numberOfMonsters[4][4]--;
+                        if (numberOfMonsters[4][4] == 3 || numberOfMonsters[4][4] == 2)
+                        {
+                            stage = 4;
+                        }
+                        if (numberOfMonsters[4][4] == 0)
+                        {
+                            level = 0;
+                            stage = 0;
+                        }
+                    }
+                    break;
+
             }
         }
     }

@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 7150338055094780621, guid: 69e69adbe607dff41a8905d937bbe18b, type: 3}
   - {fileID: 4975273916044625202, guid: 8fdd09d1b03d34643aa86ceb326f0f55, type: 3}
   - {fileID: 7693159627235983957, guid: 0c59851f2373a0041b263c05307c18b4, type: 3}
-  - {fileID: 8622937692078906942, guid: 6bc71a4aa4d74b84f85f63f0dddffc56, type: 3}
+  - {fileID: 2640421835021724396, guid: 6bc71a4aa4d74b84f85f63f0dddffc56, type: 3}
   - {fileID: 3947986428282789830, guid: 7be090d9031d23144a6df9ec4fb42ccf, type: 3}
   startPosition: {fileID: 1313200375}
   monstersInGame: {fileID: 1954791922}
