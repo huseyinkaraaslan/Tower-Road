@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638222456710000650
-    m_Hash: 3566191900
+      ticks: 638236650820582292
+    m_Hash: 1835325483
   m_LockFileStatus:
     m_FilePath: C:/Users/husey/OneDrive/Belgeler/GitHub/Tower-Road/Tower Road/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638222456952674945
-    m_Hash: 2274178205
+      ticks: 638236650821615841
+    m_Hash: 3710707895
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -828,8 +828,12 @@ m_PackageAssets:
         version: 1.0.1
       resolvedDependencies:
       - name: com.unity.services.core
-        version: 1.0.1
+        version: 1.4.0
       - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.modules.androidjni
         version: 1.0.0
       keywords:
       - backup
@@ -864,6 +868,89 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
         revision: 611215dcd30048fa921b4be160048bad4022d65f
+        path: 
+    - packageId: com.unity.device-simulator@3.1.0-preview
+      testable: 0
+      isDirectDependency: 1
+      version: 3.1.0-preview
+      source: 1
+      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.device-simulator@3.1.0-preview
+      assetPath: Packages/com.unity.device-simulator
+      name: com.unity.device-simulator
+      displayName: Device Simulator
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: asset
+      description: Device Simulator is an alternative to the traditional Unity editor
+        Game window. By simulating Screen and SystemInfo class behavior, Device Simulator
+        aims to give an accurate picture of how an app will look on a device.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-preview
+        - 1.1.0-preview
+        - 1.2.0-preview
+        - 1.3.0-preview
+        - 2.0.0-preview
+        - 2.1.0-preview
+        - 2.1.1-preview
+        - 2.2.0-preview
+        - 2.2.1-preview
+        - 2.2.2-preview
+        - 2.2.3-preview
+        - 2.2.4-preview
+        - 3.0.0-preview
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview
+        - 3.1.0-preview
+        compatible:
+        - 1.0.0-preview
+        - 1.1.0-preview
+        - 1.2.0-preview
+        - 1.3.0-preview
+        - 2.0.0-preview
+        - 2.1.0-preview
+        - 2.1.1-preview
+        - 2.2.0-preview
+        - 2.2.1-preview
+        - 2.2.2-preview
+        - 2.2.3-preview
+        - 2.2.4-preview
+        - 3.0.0-preview
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview
+        - 3.1.0-preview
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - Device
+      - Simulator
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 638097372990000000
+      documentationUrl: https://docs.unity3d.com/Packages/com.unity.device-simulator@3.1/manual/index.html
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/com.unity.device-simulator.git
+        revision: 7dc2b84e68dde0037a2a2a28a0fad0b9389ab061
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -924,6 +1011,7 @@ m_PackageAssets:
         - 3.0.20
         - 3.0.21
         - 3.0.22
+        - 3.0.24
         compatible:
         - 1.0.2
         - 1.0.6
@@ -962,6 +1050,7 @@ m_PackageAssets:
         - 3.0.20
         - 3.0.21
         - 3.0.22
+        - 3.0.24
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -1168,6 +1257,318 @@ m_PackageAssets:
         url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
         revision: b0740c80bfc2440527c317109f7c3d9100132722
         path: 
+    - packageId: com.unity.remote-config@3.1.3
+      testable: 0
+      isDirectDependency: 1
+      version: 3.1.3
+      source: 1
+      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.remote-config@3.1.3
+      assetPath: Packages/com.unity.remote-config
+      name: com.unity.remote-config
+      displayName: Remote Config
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: asset
+      description: "Remote Config is a cloud service that lets you tune and customize
+        your app over the air without requiring an update to your game.  You can
+        use rules to enable or disable features, change the difficulty of your game
+        or run special events to target specific audiences.  Campaigns control when
+        updates are applied and to whom, while Unity manages delivery of your game
+        content with minimal performance impact. \n\nRemote Config can be configured
+        via the editor or through our public API\u2019s.  Functionality includes:
+        \n- Release new features without deploying code:\n   - Feature flagging\n  
+        - Staged Rollouts\n   - Kill switch functionality\n   - Start & End Date\n  
+        - Enable & disable rules\n- Personalized real-time segmentation with custom
+        attributes\n   - Custom conditions for applying setting variants\n   - Device,
+        user, game and other arbitrary attributes supporting\n- Reporting\n   - Tracing
+        ID for decorating analytics events"
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.3.0-preview.4
+        - 0.3.1-preview.2
+        - 0.3.2-preview
+        - 1.0.0-preview
+        - 1.0.4-preview.2
+        - 1.0.5-preview
+        - 1.0.6-preview
+        - 1.0.6
+        - 1.0.7-preview
+        - 1.0.8-preview
+        - 1.0.8-preview.1
+        - 1.0.8
+        - 1.0.9-preview
+        - 1.0.9-preview.1
+        - 1.0.9
+        - 1.0.10-preview.1
+        - 1.1.0-preview
+        - 1.1.0-preview.1
+        - 1.1.0-preview.2
+        - 1.1.0-preview.3
+        - 1.1.0-preview.4
+        - 1.2.0-preview
+        - 1.2.0-preview.1
+        - 1.2.0-preview.2
+        - 1.2.0-preview.3
+        - 1.2.0-preview.4
+        - 1.2.0-preview.5
+        - 1.2.1-preview
+        - 1.2.1
+        - 1.2.2-preview.1
+        - 1.2.2
+        - 1.2.3-preview.1
+        - 1.2.3-preview.2
+        - 1.2.3
+        - 1.2.4-preview.2
+        - 1.2.4-preview.3
+        - 1.2.4-preview.4
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.1-preview.1
+        - 1.3.1-preview.2
+        - 1.3.1-preview.3
+        - 1.3.1-preview.4
+        - 1.3.2-preview.1
+        - 1.3.2-preview.2
+        - 1.3.2-preview.3
+        - 1.3.2-preview.4
+        - 1.3.2-preview.5
+        - 1.3.2-preview.6
+        - 1.3.2-preview.7
+        - 1.3.2-preview.8
+        - 1.3.2-preview.9
+        - 1.3.2-preview.10
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.0-preview.6
+        - 1.4.0-preview.7
+        - 1.4.0-preview.8
+        - 1.4.0
+        - 2.0.0-preview.2
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2-exp.1
+        - 2.1.0-exp.1
+        - 2.1.0-exp.2
+        - 2.1.1-exp.1
+        - 2.1.1-exp.2
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3-exp.1
+        - 2.1.3-exp.2
+        - 2.1.3-exp.3
+        - 2.1.3-exp.4
+        - 2.1.3-exp.6
+        - 2.1.3-exp.7
+        - 2.1.3-exp.8
+        - 2.1.3-exp.9
+        - 2.1.3-exp.10
+        - 2.1.3-exp.11
+        - 3.0.0-pre.3
+        - 3.0.0-pre.4
+        - 3.0.0-pre.5
+        - 3.0.0-pre.6
+        - 3.0.0-pre.7
+        - 3.0.0-pre.8
+        - 3.0.0-pre.9
+        - 3.0.0-pre.10
+        - 3.0.0-pre.11
+        - 3.0.0-pre.12
+        - 3.0.0-pre.13
+        - 3.0.0-pre.14
+        - 3.0.0-pre.15
+        - 3.0.0
+        - 3.1.0
+        - 3.1.3
+        - 3.2.2
+        - 3.3.1
+        - 3.3.2
+        compatible:
+        - 0.3.0-preview.4
+        - 0.3.1-preview.2
+        - 0.3.2-preview
+        - 1.0.0-preview
+        - 1.0.4-preview.2
+        - 1.0.5-preview
+        - 1.0.6-preview
+        - 1.0.6
+        - 1.0.7-preview
+        - 1.0.8-preview
+        - 1.0.8-preview.1
+        - 1.0.8
+        - 1.0.9-preview
+        - 1.0.9-preview.1
+        - 1.0.9
+        - 1.0.10-preview.1
+        - 1.1.0-preview
+        - 1.1.0-preview.1
+        - 1.1.0-preview.2
+        - 1.1.0-preview.3
+        - 1.1.0-preview.4
+        - 1.2.0-preview
+        - 1.2.0-preview.1
+        - 1.2.0-preview.2
+        - 1.2.0-preview.3
+        - 1.2.0-preview.4
+        - 1.2.0-preview.5
+        - 1.2.1-preview
+        - 1.2.1
+        - 1.2.2-preview.1
+        - 1.2.2
+        - 1.2.3-preview.1
+        - 1.2.3-preview.2
+        - 1.2.3
+        - 1.2.4-preview.2
+        - 1.2.4-preview.3
+        - 1.2.4-preview.4
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.1-preview.1
+        - 1.3.1-preview.2
+        - 1.3.1-preview.3
+        - 1.3.1-preview.4
+        - 1.3.2-preview.1
+        - 1.3.2-preview.2
+        - 1.3.2-preview.3
+        - 1.3.2-preview.4
+        - 1.3.2-preview.5
+        - 1.3.2-preview.6
+        - 1.3.2-preview.7
+        - 1.3.2-preview.8
+        - 1.3.2-preview.9
+        - 1.3.2-preview.10
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.0-preview.6
+        - 1.4.0-preview.7
+        - 1.4.0-preview.8
+        - 1.4.0
+        - 2.0.0-preview.2
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2-exp.1
+        - 2.1.0-exp.1
+        - 2.1.0-exp.2
+        - 2.1.1-exp.1
+        - 2.1.1-exp.2
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3-exp.1
+        - 2.1.3-exp.2
+        - 2.1.3-exp.3
+        - 2.1.3-exp.4
+        - 2.1.3-exp.6
+        - 2.1.3-exp.7
+        - 2.1.3-exp.8
+        - 2.1.3-exp.9
+        - 2.1.3-exp.10
+        - 2.1.3-exp.11
+        - 3.0.0-pre.3
+        - 3.0.0-pre.4
+        - 3.0.0-pre.5
+        - 3.0.0-pre.6
+        - 3.0.0-pre.7
+        - 3.0.0-pre.8
+        - 3.0.0-pre.9
+        - 3.0.0-pre.10
+        - 3.0.0-pre.11
+        - 3.0.0-pre.12
+        - 3.0.0-pre.13
+        - 3.0.0-pre.14
+        - 3.0.0-pre.15
+        - 3.0.0
+        - 3.1.0
+        - 3.1.3
+        - 3.2.2
+        - 3.3.1
+        - 3.3.2
+        verified: 3.1.3
+      dependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.remote-config-runtime
+        version: 3.1.3
+      resolvedDependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.remote-config-runtime
+        version: 3.1.3
+      - name: com.unity.modules.unityanalytics
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.services.core
+        version: 1.4.0
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      - name: com.unity.services.authentication
+        version: 2.0.0
+      keywords:
+      - remote
+      - config
+      - configuration
+      - settings
+      - remote settings
+      - remote config
+      - firebase
+      - staged rollouts
+      - feature flagging
+      - roll-out
+      - adapt
+      - tune
+      - tailor
+      - test
+      - experiment
+      - experimentation
+      - app update
+      - target
+      - targeting
+      - segment
+      - segmentation
+      - segmenting
+      - override
+      - rules
+      - variants
+      - variation
+      - parameter
+      - conditions
+      - conditional
+      - continuous delivery
+      - deploy
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637915161540000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.remote-config.git
+        revision: b673ee2ad29779bbe4deb7592ba9d4a4cb5babf0
+        path: 
     - packageId: com.unity.test-framework@1.1.31
       testable: 0
       isDirectDependency: 1
@@ -1228,6 +1629,7 @@ m_PackageAssets:
         - 1.3.3
         - 1.3.4
         - 1.3.5
+        - 1.3.7
         - 2.0.1-exp.1
         - 2.0.1-exp.2
         - 2.0.1-pre.12
@@ -1241,6 +1643,7 @@ m_PackageAssets:
         - 1.3.3
         - 1.3.4
         - 1.3.5
+        - 1.3.7
         - 2.0.1-exp.1
         - 2.0.1-exp.2
         - 2.0.1-pre.12
@@ -1549,10 +1952,12 @@ m_PackageAssets:
         - 1.7.2
         - 1.7.3
         - 1.7.4
+        - 1.7.5
         - 1.8.0
         - 1.8.1
         - 1.8.2
         - 1.8.3
+        - 1.8.4
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -1585,10 +1990,12 @@ m_PackageAssets:
         - 1.7.2
         - 1.7.3
         - 1.7.4
+        - 1.7.5
         - 1.8.0
         - 1.8.1
         - 1.8.2
         - 1.8.3
+        - 1.8.4
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -3454,7 +3861,7 @@ m_PackageAssets:
         email: 
         url: 
       category: Libraries
-      type: 
+      type: asset
       description: Custom version of the nunit package build to work with Unity.
         Used by the Unity Test Framework.
       status: 4
@@ -3469,6 +3876,8 @@ m_PackageAssets:
         - 1.0.6
         - 2.0.2
         - 2.0.3
+        - 2.0.4
+        - 2.0.5
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
@@ -3478,6 +3887,8 @@ m_PackageAssets:
         - 1.0.6
         - 2.0.2
         - 2.0.3
+        - 2.0.4
+        - 2.0.5
         verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
@@ -3493,7 +3904,7 @@ m_PackageAssets:
         isDefault: 1
         capabilities: 7
       hasRegistry: 1
-      hideInEditor: 1
+      hideInEditor: 0
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
@@ -3505,85 +3916,260 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
-    - packageId: com.unity.services.core@1.0.1
+    - packageId: com.unity.nuget.newtonsoft-json@3.0.2
       testable: 0
       isDirectDependency: 0
-      version: 1.0.1
+      version: 3.0.2
       source: 1
-      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.services.core@1.0.1
-      assetPath: Packages/com.unity.services.core
-      name: com.unity.services.core
-      displayName: Services Core
+      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2
+      assetPath: Packages/com.unity.nuget.newtonsoft-json
+      name: com.unity.nuget.newtonsoft-json
+      displayName: Newtonsoft Json
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Newtonsoft Json for use in Unity projects and Unity packages.
+        Currently synced to version 13.0.1.
+
+
+        This package is used for advanced
+        json serialization and deserialization. Most Unity users will be better suited
+        using the existing json tools built into Unity.
+
+        To avoid assembly
+        clashes, please use this package if you intend to use Newtonsoft Json.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.1-preview.1
+        - 1.1.2
+        - 2.0.0-preview
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.2
+        - 3.0.1
+        - 3.0.2
+        compatible:
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.1-preview.1
+        - 1.1.2
+        - 2.0.0-preview
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.2
+        - 3.0.1
+        - 3.0.2
+        verified: 3.0.2
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637846828220000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+        revision: 8f66870a71ad3f2cdd46330b5c482dfd138ffc64
+        path: 
+    - packageId: com.unity.remote-config-runtime@3.1.3
+      testable: 0
+      isDirectDependency: 0
+      version: 3.1.3
+      source: 1
+      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.remote-config-runtime@3.1.3
+      assetPath: Packages/com.unity.remote-config-runtime
+      name: com.unity.remote-config-runtime
+      displayName: Remote Config Runtime
       author:
         name: 
         email: 
         url: 
       category: 
       type: asset
-      description: 'This package defines common components used by multiple Game
-        Service packages.
-
-        These are standardized and aim to unify the overall
-        experience of working with Game Services packages.'
+      description: Remote Config is a cloud service that lets you tune and customize
+        your app over the air without requiring an update to your game.  This package
+        is intended to be inherited as a dependency, and should not be directly installed,
+        by end users. Unity Developers that want to implement Unity Remote Config
+        in their game/application, should use the Remote Config Package `com.unity.remote-config`
+        rather than this package directly.
       status: 4
       errors: []
       versions:
         all:
+        - 1.0.0-exp.2
+        - 1.0.0-exp.3
+        - 1.0.0
+        - 1.0.1-exp.2
         - 1.0.1
-        - 1.1.0-pre.7
-        - 1.1.0-pre.8
-        - 1.1.0-pre.9
-        - 1.1.0-pre.10
-        - 1.1.0-pre.11
-        - 1.1.0-pre.41
-        - 1.1.0-pre.69
-        - 1.2.0
-        - 1.3.1
-        - 1.3.2
-        - 1.4.0
-        - 1.4.1
-        - 1.4.2
-        - 1.4.3
-        - 1.5.2
-        - 1.6.0
-        - 1.7.0
-        - 1.7.1
-        - 1.8.1
-        - 1.8.2
-        - 1.9.0
-        - 1.10.1
+        - 1.0.2-exp.1
+        - 2.0.0
+        - 2.0.1-exp.1
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3-exp.1
+        - 2.1.3-exp.2
+        - 2.1.3-exp.3
+        - 2.1.3-exp.4
+        - 2.1.3-exp.5
+        - 2.1.3-exp.6
+        - 2.1.3-exp.7
+        - 2.1.3-exp.8
+        - 2.1.3-exp.9
+        - 2.1.3-exp.10
+        - 3.0.0-pre.7
+        - 3.0.0-pre.8
+        - 3.0.0-pre.10
+        - 3.0.0-pre.11
+        - 3.0.0-pre.12
+        - 3.0.0-pre.13
+        - 3.0.0-pre.15
+        - 3.0.0-pre.16
+        - 3.0.0-pre.17
+        - 3.0.0-pre.18
+        - 3.0.0-pre.19
+        - 3.0.0-pre.21
+        - 3.0.0-pre.22
+        - 3.0.0-pre.23
+        - 3.0.0-pre.24
+        - 3.0.0-pre.25
+        - 3.0.0-pre.26
+        - 3.0.0-pre.27
+        - 3.0.0-pre.28
+        - 3.0.0-pre.29
+        - 3.0.0-pre.30
+        - 3.0.0
+        - 3.1.0
+        - 3.1.3
+        - 4.0.1
         compatible:
+        - 1.0.0-exp.2
+        - 1.0.0-exp.3
+        - 1.0.0
+        - 1.0.1-exp.2
         - 1.0.1
-        - 1.1.0-pre.7
-        - 1.1.0-pre.8
-        - 1.1.0-pre.9
-        - 1.1.0-pre.10
-        - 1.1.0-pre.11
-        - 1.1.0-pre.41
-        - 1.1.0-pre.69
-        - 1.2.0
-        - 1.3.1
-        - 1.3.2
-        - 1.4.0
-        - 1.4.1
-        - 1.4.2
-        - 1.4.3
-        - 1.5.2
-        - 1.6.0
-        - 1.7.0
-        - 1.7.1
-        - 1.8.1
-        - 1.8.2
-        - 1.9.0
-        - 1.10.1
-        verified: 1.4.3
+        - 1.0.2-exp.1
+        - 2.0.0
+        - 2.0.1-exp.1
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3-exp.1
+        - 2.1.3-exp.2
+        - 2.1.3-exp.3
+        - 2.1.3-exp.4
+        - 2.1.3-exp.5
+        - 2.1.3-exp.6
+        - 2.1.3-exp.7
+        - 2.1.3-exp.8
+        - 2.1.3-exp.9
+        - 2.1.3-exp.10
+        - 3.0.0-pre.7
+        - 3.0.0-pre.8
+        - 3.0.0-pre.10
+        - 3.0.0-pre.11
+        - 3.0.0-pre.12
+        - 3.0.0-pre.13
+        - 3.0.0-pre.15
+        - 3.0.0-pre.16
+        - 3.0.0-pre.17
+        - 3.0.0-pre.18
+        - 3.0.0-pre.19
+        - 3.0.0-pre.21
+        - 3.0.0-pre.22
+        - 3.0.0-pre.23
+        - 3.0.0-pre.24
+        - 3.0.0-pre.25
+        - 3.0.0-pre.26
+        - 3.0.0-pre.27
+        - 3.0.0-pre.28
+        - 3.0.0-pre.29
+        - 3.0.0-pre.30
+        - 3.0.0
+        - 3.1.0
+        - 3.1.3
+        verified: 3.1.3
       dependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
       - name: com.unity.modules.unitywebrequest
         version: 1.0.0
+      - name: com.unity.modules.unityanalytics
+        version: 1.0.0
+      - name: com.unity.services.core
+        version: 1.4.0
+      - name: com.unity.services.authentication
+        version: 2.0.0
       resolvedDependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
       - name: com.unity.modules.unitywebrequest
         version: 1.0.0
-      keywords: []
+      - name: com.unity.modules.unityanalytics
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.services.core
+        version: 1.4.0
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      - name: com.unity.services.authentication
+        version: 2.0.0
+      keywords:
+      - remote
+      - config
+      - configuration
+      - settings
+      - remote settings
+      - remote config
+      - firebase
+      - staged rollouts
+      - feature flagging
+      - roll-out
+      - adapt
+      - tune
+      - tailor
+      - test
+      - experiment
+      - experimentation
+      - app update
+      - target
+      - targeting
+      - segment
+      - segmentation
+      - segmenting
+      - override
+      - rules
+      - variants
+      - variation
+      - parameter
+      - conditions
+      - conditional
+      - continuous delivery
+      - deploy
       registry:
         id: main
         name: 
@@ -3596,13 +4182,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637604883250000000
+      datePublishedTicks: 637915161500000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-        revision: 4cd880d4fd5c60597629249bf4f324e4c8d7aa2e
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.remote-config-runtime.git
+        revision: 91b2d12b27935e9c9b1a488069ac9dc6945b8bfc
         path: 
     - packageId: com.unity.mathematics@1.1.0
       testable: 0
@@ -3868,6 +4454,203 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
+        path: 
+    - packageId: com.unity.services.core@1.4.0
+      testable: 0
+      isDirectDependency: 0
+      version: 1.4.0
+      source: 1
+      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.services.core@1.4.0
+      assetPath: Packages/com.unity.services.core
+      name: com.unity.services.core
+      displayName: Services Core
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: asset
+      description: 'This package defines common components used by multiple Game
+        Service packages.
+
+        These are standardized and aim to unify the overall
+        experience of working with Game Services SDK.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.1
+        - 1.1.0-pre.7
+        - 1.1.0-pre.8
+        - 1.1.0-pre.9
+        - 1.1.0-pre.10
+        - 1.1.0-pre.11
+        - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
+        - 1.3.1
+        - 1.3.2
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.5.2
+        - 1.6.0
+        - 1.7.0
+        - 1.7.1
+        - 1.8.1
+        - 1.8.2
+        - 1.9.0
+        - 1.10.1
+        compatible:
+        - 1.0.1
+        - 1.1.0-pre.7
+        - 1.1.0-pre.8
+        - 1.1.0-pre.9
+        - 1.1.0-pre.10
+        - 1.1.0-pre.11
+        - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
+        - 1.3.1
+        - 1.3.2
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.5.2
+        - 1.6.0
+        - 1.7.0
+        - 1.7.1
+        - 1.8.1
+        - 1.8.2
+        - 1.9.0
+        - 1.10.1
+        verified: 1.4.3
+      dependencies:
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637871962570000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+        revision: 92e281deb97a96f7b32464b6874de73a17c140ff
+        path: 
+    - packageId: com.unity.services.authentication@2.0.0
+      testable: 0
+      isDirectDependency: 0
+      version: 2.0.0
+      source: 1
+      resolvedPath: C:\Users\husey\OneDrive\Belgeler\GitHub\Tower-Road\Tower Road\Library\PackageCache\com.unity.services.authentication@2.0.0
+      assetPath: Packages/com.unity.services.authentication
+      name: com.unity.services.authentication
+      displayName: Authentication
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: library
+      description: 'Client SDK offering player identity management for Unity Gaming
+        Services.
+
+
+        Identity providers can be configured from the editor
+        or the Unity Dashboard.
+
+
+        Player management is available in the Unity
+        Dashboard.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-pre.4
+        - 1.0.0-pre.6
+        - 1.0.0-pre.37
+        - 2.0.0
+        - 2.1.1
+        - 2.2.0
+        - 2.3.1
+        - 2.4.0
+        - 2.5.0-pre.3
+        - 2.5.0
+        - 2.6.1
+        compatible:
+        - 1.0.0-pre.4
+        - 1.0.0-pre.6
+        - 1.0.0-pre.37
+        - 2.0.0
+        - 2.1.1
+        - 2.2.0
+        - 2.3.1
+        - 2.4.0
+        - 2.5.0-pre.3
+        - 2.5.0
+        - 2.6.1
+        verified: 2.0.0
+      dependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.services.core
+        version: 1.3.1
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 3.0.2
+      - name: com.unity.services.core
+        version: 1.4.0
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637853947760000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+        revision: 1a2efa54d7c36f506ac22e88dfb68cb9f6003691
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []

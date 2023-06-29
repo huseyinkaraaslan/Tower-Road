@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Target
   - Monster
+  - Tower
+  - Clone Tower
   layers:
   - Default
   - TransparentFX

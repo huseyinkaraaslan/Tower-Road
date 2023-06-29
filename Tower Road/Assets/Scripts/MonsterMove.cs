@@ -28,18 +28,18 @@ public class MonsterMove : MonoBehaviour
         int childCount = target.transform.childCount;
 
         if (targetCount % 2 == 0)
-        {
+        {          
             if(gameObject.name == "Dragon(Clone)" || gameObject.name == "Small Dragon(Clone)")
             {
                 transform.Translate(Time.deltaTime * 1.75f, 0, 0);
             }
             else if (gameObject.name == "Jinn(Clone)")
             {
-                transform.Translate(Time.deltaTime * 2.5f, 0, 0);
+                transform.Translate(Time.deltaTime * 2.2f, 0, 0);
             }
             else if(gameObject.name == "Medusa(Clone)")
             {
-                transform.Translate(Time.deltaTime * 2.1f, 0, 0);
+                transform.Translate(Time.deltaTime * 1.9f, 0, 0);
             }
             else
             {
@@ -59,11 +59,11 @@ public class MonsterMove : MonoBehaviour
                     }
                     else if (gameObject.name == "Jinn(Clone)")
                     {
-                        transform.Translate(0, Time.deltaTime * 2.5f, 0);
+                        transform.Translate(0, Time.deltaTime * 2.2f, 0);
                     }
                     else if (gameObject.name == "Medusa(Clone)")
                     {
-                        transform.Translate(0, Time.deltaTime * 2.1f, 0);
+                        transform.Translate(0, Time.deltaTime * 1.9f, 0);
                     }
                     else
                     {
@@ -79,11 +79,11 @@ public class MonsterMove : MonoBehaviour
                     }
                     else if (gameObject.name == "Jinn(Clone)")
                     {
-                        transform.Translate(0, -Time.deltaTime * 2.5f, 0);
+                        transform.Translate(0, -Time.deltaTime * 2.2f, 0);
                     }
                     else if (gameObject.name == "Medusa(Clone)")
                     {
-                        transform.Translate(0, -Time.deltaTime * 2.1f, 0);
+                        transform.Translate(0, -Time.deltaTime * 1.9f, 0);
                     }
                     else
                     {
