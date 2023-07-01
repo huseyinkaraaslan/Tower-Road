@@ -8,7 +8,9 @@ public class MonsterMove : MonoBehaviour
 
     private GameObject target;
     private GameObject monstersInGameParent;
-    private int targetCount, level;
+
+    private int targetCount;
+
     void Start()
     {
         target = GameObject.Find("Targets");
@@ -108,6 +110,11 @@ public class MonsterMove : MonoBehaviour
         if (collision.gameObject.tag == "Target")
         {
             targetCount++;
+        }
+
+        if(collision.gameObject.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

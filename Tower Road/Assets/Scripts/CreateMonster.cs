@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CreateMonster : MonoBehaviour
 {
-    public GameObject[] monsters;
-    public GameObject startPosition;
+    [SerializeField] private GameObject[] monsters;
+    [SerializeField] private GameObject startPosition;
 
     private List<List<int>> numberOfMonsters = new List<List<int>>();
 

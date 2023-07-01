@@ -8,6 +8,8 @@ TagManager:
   - Monster
   - Tower
   - Clone Tower
+  - Bullet
+  - Road
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Background
   - Water
   - UI
-  - 
+  - Monster
   - 
   - 
   - 

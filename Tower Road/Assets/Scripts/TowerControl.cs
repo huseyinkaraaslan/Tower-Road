@@ -1,48 +1,104 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class TowerControl : MonoBehaviour
 {
-    private Touch finger;
-    private Vector3 towerPos;
-    private bool dragging;
-    private GameObject newTower;
 
-    public void Update()
+    [SerializeField] private float targetRange = 2.7f;
+    [SerializeField] private LayerMask monsterMask;
+
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
+
+    private Transform monster;
+    private float timeOfShooting;
+    public bool isRoadTriggered;
+
+    private void Update()
     {
-        if (Input.touchCount > 0)
+        if(monster == null)
         {
-            Touch finger = Input.GetTouch(0);
-
-            if (finger.phase == TouchPhase.Began)
+            FindMonster();
+            return;
+        }
+        else
+        {
+            RotateTower();
+            if (!(Vector2.Distance(monster.position, this.transform.position) < targetRange))
             {
-                Ray ray = Camera.main.ScreenPointToRay(finger.position);
-                RaycastHit hit;
+                monster = null;
+            }
+            else
+            {
+                timeOfShooting += Time.deltaTime;
 
-                if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Tower")
-                {
-                    dragging = true;
-                    newTower = Instantiate(hit.collider.gameObject);
-                    newTower.tag = "Clone Tower";
+                if(timeOfShooting > .5f){
+                    Shoot();
+                    timeOfShooting = 0f;
                 }
             }
-            if(finger.phase == TouchPhase.Moved)
+        }        
+    }
+
+    private void FindMonster()
+    {
+        if(this.gameObject.tag != "Tower")
+        {
+            RaycastHit2D[] monstersHit = Physics2D.CircleCastAll(transform.position, targetRange, transform.position, 0f, monsterMask);
+
+            if (monstersHit.Length > 0)
             {
-                if (dragging)
-                {
-                    towerPos = Camera.main.ScreenToWorldPoint(finger.position);
-                    towerPos.z = 0;
-                    newTower.transform.position = towerPos;
-                }
+                monster = monstersHit[0].transform;
             }
-            if(finger.phase == TouchPhase.Ended)
-            {
-                dragging = false;
-            }
+        }        
+    }
+
+    private void RotateTower()
+    {
+        float angle = Mathf.Atan2(monster.position.y - this.transform.position.y, monster.position.x - this.transform.position.x) * Mathf.Rad2Deg - 90f;
+
+        Quaternion _rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        this.transform.rotation = _rotation;
+    }
+
+    private void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        bullet.name = this.gameObject.name;
+
+        Vector2 direction = (monster.position - bullet.transform.position).normalized;
+        if(bullet.name == "Tower6(Clone)" || bullet.name == "Tower3(Clone)")
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = direction * 25;
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = direction * 15;
+        }
+        
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(transform.position, transform.forward, targetRange);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Road" || collision.gameObject.tag == "Tower")
+        {
+            isRoadTriggered = true;
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Road" || collision.gameObject.tag == "Tower")
+        {
+            isRoadTriggered = false;
+        }
+    }
 }
-
-
