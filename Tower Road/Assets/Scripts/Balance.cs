@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Balance : MonoBehaviour
 {
-    public int _balance = 50;
+    public int _balance;
     [SerializeField] private Text balanceText;
 
     private void Start()
     {
-        balanceText.text = _balance.ToString() + " $";
+        _balance = 50;
     }
 
     private void Update()
@@ -49,9 +49,7 @@ public class Balance : MonoBehaviour
     }
 
     public void increaseBalance()
-    {
-        Debug.Log(FindObjectOfType<MonsterDie>().monsterName);
-        
+    {        
         switch (FindObjectOfType<MonsterDie>().monsterName)
         {
             case "Small Dragon(Clone)":

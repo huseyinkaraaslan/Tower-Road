@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class TowerControl : MonoBehaviour
 {
@@ -78,12 +77,6 @@ public class TowerControl : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = direction * 15;
         }
         
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.red;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetRange);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

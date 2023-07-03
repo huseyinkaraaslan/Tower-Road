@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreateMonster : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class CreateMonster : MonoBehaviour
     private List<List<int>> numberOfMonsters = new List<List<int>>();
 
     public Transform monstersInGame;
+    public Text levelText;
+
     private int level, stage;
-    private float timer = 0f;
+    private float timer = 0f, levelTime = 0f;
+    private bool levelStart = false;
 
     void Start()
     {
@@ -60,11 +64,18 @@ public class CreateMonster : MonoBehaviour
     }
 
     void Update()
-    {        
+    {
         timer += Time.deltaTime;
+        levelTime += Time.deltaTime;
+
+        if (levelTime >= 5f)
+        {
+            levelStart = true;
+        }
 
         if (level == 1)
         {
+            levelText.text = level.ToString();
             switch (stage)
             {
                 case 1:
@@ -76,14 +87,17 @@ public class CreateMonster : MonoBehaviour
                         if (numberOfMonsters[0][0] == 0)
                         {
                             level = 2;
+                            levelTime = 0f;
+                            levelStart = false;
                         }
                     }
-                    break;                 
-            }
+                    break;                   
+            }            
         }
 
-        else if (level == 2)
+        else if (level == 2 && levelStart)
         {
+            levelText.text = level.ToString();
             switch (stage)
             {
                 case 1:
@@ -115,14 +129,17 @@ public class CreateMonster : MonoBehaviour
                         {
                             level = 3;
                             stage = 1;
+                            levelTime = 0f;
+                            levelStart = false;
                         }
                     }
                     break;          
             }
         }
 
-        else if (level == 3)
+        else if (level == 3 && levelStart)
         {
+            levelText.text = level.ToString();
             switch (stage)
             {
                 case 1:
@@ -170,14 +187,17 @@ public class CreateMonster : MonoBehaviour
                         {
                             level = 4;
                             stage = 1;
+                            levelTime = 0f;
+                            levelStart = false;
                         }
                     }
                     break;
             }
         }
 
-        else if (level == 4) 
+        else if (level == 4 && levelStart) 
         {
+            levelText.text = level.ToString();
             switch (stage)
             {
                 case 1:
@@ -241,14 +261,17 @@ public class CreateMonster : MonoBehaviour
                         {
                             level = 5;
                             stage = 1;
+                            levelTime = 0f;
+                            levelStart = false;
                         }
                     }
                     break;
             }
         }
 
-        else if (level == 5)
+        else if (level == 5 && levelStart)
         {
+            levelText.text = level.ToString();
             switch (stage)
             {
                 case 1:
@@ -329,6 +352,8 @@ public class CreateMonster : MonoBehaviour
                         {
                             level = 6;
                             stage = 1;
+                            levelTime = 0f;
+                            levelStart = false;
                         }
                     }
                     break;
@@ -336,8 +361,9 @@ public class CreateMonster : MonoBehaviour
             }
         }
 
-        else if (level == 6)
+        else if (level == 6 && levelStart)
         {
+            levelText.text = level.ToString();
             switch (stage)
             {
                 case 1:
@@ -435,7 +461,8 @@ public class CreateMonster : MonoBehaviour
                         {
                             level = 0;
                             stage = 0;
-                            Debug.Log("Game Completed");
+                            levelTime = 0f;
+                            levelStart = false;
                         }
                     }
                     break;

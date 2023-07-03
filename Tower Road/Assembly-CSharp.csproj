@@ -57,13 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MonsterDie.cs" />
+    <Compile Include="Assets\Scripts\PlayerHP.cs" />
+    <Compile Include="Assets\Scripts\MenuControl.cs" />
     <Compile Include="Assets\Scripts\CreateTower.cs" />
     <Compile Include="Assets\Scripts\CreateMonster.cs" />
     <Compile Include="Assets\Scripts\TowerControl.cs" />
     <Compile Include="Assets\Scripts\MonsterMove.cs" />
     <Compile Include="Assets\Scripts\Balance.cs" />
-    <Compile Include="Assets\Scripts\PlayerHP.cs" />
-    <Compile Include="Assets\Scripts\MenuControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

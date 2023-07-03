@@ -16,23 +16,23 @@ public class MonsterDie : MonoBehaviour
                 break;
 
             case "Lizard(Clone)":
-                healthy = 40;
+                healthy = 50;
                 break;
 
             case "Medusa(Clone)":
-                healthy = 80;
-                break;
-
-            case "Jinn(Clone)":
-                healthy = 120;
-                break;
-
-            case "Dragon(Clone)":
                 healthy = 150;
                 break;
 
-            case "Demon(Clone)":
+            case "Jinn(Clone)":
                 healthy = 250;
+                break;
+
+            case "Dragon(Clone)":
+                healthy = 400;
+                break;
+
+            case "Demon(Clone)":
+                healthy = 750;
                 break;
         }
     }
