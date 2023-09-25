@@ -1,1 +1,1 @@
-[Gameplay](https://youtu.be/avcEe1dZzFY)
+[Gameplay Video](https://youtu.be/avcEe1dZzFY)
